@@ -18,7 +18,10 @@
     "socials": true
   },
   "categories_list": {
-    "featured": [],
+    "featured": [
+      "/vibradores-acessorios-plugs?Vibradores e Acessórios",
+      "/sadomasoquismo-bdsm?Sadomasoquismo e BDSM"
+    ],
     "random": 6,
     "full_width": false
   },

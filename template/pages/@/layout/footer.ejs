@@ -2,17 +2,6 @@
 // load footer options and contacts from content
 const footer = _.cms('footer') || {}
 const contacts = _.cms('contacts') || {}
-
-// social networks handled by contacts
-const networksWithColors = [
-  ['facebook', '#3b5998'],
-  ['youtube', '#ff0000'],
-  ['instagram', '#e1306c'],
-  ['twitter', '#1da1f2'],
-  ['tiktok', '#000000'],
-  ['pinterest', '#bd081c'],
-  ['linkedin', '#0073b1']
-]
 %>
 
 <footer class="footer py-3 py-lg-4 py-xl-5">
@@ -31,7 +20,7 @@ const networksWithColors = [
               <% if (contacts.whatsapp) { %>
                 <li>
                   <span class="footer__list-icon">
-                    <i class="fab fa-whatsapp"></i>
+                    <i class="i-whatsapp"></i>
                   </span>
                   <a
                     href="javascript:;"
@@ -47,7 +36,7 @@ const networksWithColors = [
               <% if (contacts.phone) { %>
                 <li>
                   <span class="footer__list-icon">
-                    <i class="fas fa-phone"></i>
+                    <i class="i-phone"></i>
                   </span>
                   <a
                     href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
@@ -77,19 +66,7 @@ const networksWithColors = [
 
           <% if (footer.contacts.socials) { %>
             <p class="footer__social">
-              <% networksWithColors.forEach(([network, color]) => { %>
-                <% if (contacts[network]) { %>
-                  <a
-                    href="<%= contacts[network] %>"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="<%= network %>"
-                    style="color: <%= color %>"
-                  >
-                    <i class="fab fa-<%= network %>"></i>
-                  </a>
-                <% } %>
-              <% }) %>
+              <%- await include('@/layout/inc/networks', { _, contacts }) %>
             </p>
           <% } %>
         </div>
@@ -113,7 +90,7 @@ const networksWithColors = [
                 <% (_.cms('pages') || []).forEach(slug => { %>
                   <% const { title } = _.cms(`pages/${slug}`) %>
                   <li>
-                    <i class="fas fa-angle-right"></i>
+                    <i class="i-chevron-right"></i>
                     <a href="/pages/<%= slug %>">
                       <%= title %>
                     </a>
@@ -124,7 +101,7 @@ const networksWithColors = [
               <ul class="footer__links">
                 <% footer.links_1.list.forEach(({ url, text }) => { %>
                   <li>
-                    <i class="fas fa-angle-right"></i>
+                    <i class="i-chevron-right"></i>
                     <a href="<%= url %>">
                       <%= text %>
                     </a>
@@ -154,7 +131,7 @@ const networksWithColors = [
                 <% _.categories.forEach(({ name, slug, parent }) => { %>
                   <% if (!parent) { %>
                     <li>
-                      <i class="fas fa-angle-right"></i>
+                      <i class="i-chevron-right"></i>
                       <a href="/<%= slug %>">
                         <%= name %>
                       </a>
@@ -166,7 +143,7 @@ const networksWithColors = [
               <ul class="footer__links">
                 <% footer.links_2.list.forEach(({ url, text }) => { %>
                   <li>
-                    <i class="fas fa-angle-right"></i>
+                    <i class="i-chevron-right"></i>
                     <a href="<%= url %>">
                       <%= text %>
                     </a>
@@ -209,20 +186,10 @@ const networksWithColors = [
         type="button"
         aria-label="<%= _.dictionary('goToTop') %>"
       >
-        <i class="fas fa-chevron-up"></i>
+        <i class="i-chevron-up"></i>
       </button>
     </div>
   </div>
 </footer>
 
-<div class="ecom-credits">
-  <a href="https://e-com.plus" target="_blank" rel="noopener">
-    Powered by
-    <img
-      src="https://ecom.nyc3.digitaloceanspaces.com/brand/plus/198x43.png"
-      alt="E-Com Plus"
-      width="92"
-      height="19.98"
-    >
-  </a>
-</div>
+<%- await include('@/layout/inc/ecom-credits') %>

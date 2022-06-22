@@ -1,6 +1,6 @@
 {
   "marketing_stripe": {
-    "text": "Aproveite nossos descontos de até 40%!",
+    "text": "Frete grátis nas compras acima de R$350",
     "link": "/promotion"
   },
   "contacts_stripe": {
@@ -25,5 +25,6 @@
     "random": 6,
     "full_width": false
   },
-  "search_input": true
+  "search_input": true,
+  "desktop_megamenu": true
 }

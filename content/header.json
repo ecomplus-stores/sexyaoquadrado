@@ -23,8 +23,10 @@
       "/sadomasoquismo-bdsm?Sadomasoquismo e BDSM"
     ],
     "random": 6,
-    "full_width": false
+    "full_width": true
   },
   "search_input": true,
-  "desktop_megamenu": true
+  "desktop_megamenu": true,
+  "full_width_submenu": true,
+  "alphabetical_order_submenu": true
 }

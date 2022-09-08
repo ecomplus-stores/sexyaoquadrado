@@ -1,23 +1,25 @@
 {
-  "store_id": 1187,
-  "name": "sexyaoquadrado",
   "domain": "www.sexyaoquadrado.com.br",
-  "short_name": "sexyaoquadrado",
-  "description": "sexyaoquadrado.",
-  "primary_color": "#222831",
-  "secondary_color": "#393e46",
-  "bg_color": "#ffffff",
+  "currency_symbol": "R$",
+  "primary_color": "#444e5e",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
+  "bg_color": "#ffffff",
   "logo": "/img/uploads/logo.png",
-  "mini_logo": "",
-  "icon": "/img/icon.png",
-  "large_icon": "/img/large-icon.png",
-  "favicon": "/img/uploads/favicon.png",
+  "name": "sexyaoquadrado",
+  "short_name": "sexyaoquadrado",
   "lang": "pt_br",
   "currency": "BRL",
-  "currency_symbol": "R$",
-  "country_code": "BR"
+  "mini_logo": "",
+  "font_family": "_",
+  "favicon": "/img/uploads/favicon.png",
+  "icons_font": "bootstrap-icons",
+  "country_code": "BR",
+  "secondary_color": "#606772",
+  "icon": "/img/icon.png",
+  "store_id": 1187,
+  "description": "sexyaoquadrado.",
+  "large_icon": "/img/large-icon.png"
 }

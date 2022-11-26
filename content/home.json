@@ -19,7 +19,7 @@
     },
     {
       "type": "info-bar",
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "collection-shelf",

@@ -7,12 +7,12 @@
       "autoplay": 10000,
       "slides": [
         {
-          "img": "/img/uploads/banner-black-friday-jovem-azul-e-rosa-1200-300-px-.png",
-          "link": "https://www.sexyaoquadrado.com.br/black-friday",
+          "img": "/img/uploads/banner2.png",
+          "link": "https://www.sexyaoquadrado.com.br",
           "alt": "Headset banner",
           "start": "2020-04-11T05:54:06.750Z",
           "end": "2024-12-31T03:00:00.000Z",
-          "mobile_img": "/img/uploads/banner-black-friday-jovem-azul-e-rosa-1200-300-px-480-300-px-.png"
+          "mobile_img": "/img/uploads/favicon.png"
         }
       ],
       "full_width": true
